@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.hero{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(11, 11, 144));
+    color: #fff;
+    position: relative;
+}
+.container{
+    width: 800px;
+    height: 180px;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+.clock{
+    height: 100%;
+    width: 100%;
+    background: rgba(235, 0, 255, 0.2);
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    background: rgba(184, 177, 177, 0.3);
+}
+ .container::before{ 
+    content: '';
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    background: #f41b75;
+    left: -50px;
+    top: -50px;
+    z-index: -1;
+    position: absolute;
+}
+.container::after{ 
+    content: '';
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #419aff;
+    right: -30px;
+    bottom:-50px;
+    z-index: -1;
+    position: absolute;
+}
+.clock > span{
+    display: inline-block;
+    text-align: center;
+    width: 80px;
+    font-size: 110px;
+    position: relative;
+}
+.clock > span::after{
+   font-size: 16px;
+   position: absolute;
+   left: 50%; 
+   transform: translateX(-50%);
+   bottom: 3px;
+}
+#hrs::after{
+    content: 'HOURS';
+}
+#min::after{
+    content: 'MINS';
+}
+#sec::after{
+    content: 'SEC';
+}
+.btn{
+    color: white;
+    border: white solid 2px;
+    border-radius: 7px;
+    background: linear-gradient(45deg, rgb(0, 0, 0), rgb(11, 11, 144));    
+    position: relative;
+    left:20%;
+    top:70%;
+    text-decoration: none;
+    height: 30px;
+    width: 100px;
+}
+.btn:hover{
+    box-shadow: 7px 7px rgb(170, 10, 244);
+}
+.btn2{
+        color: white;
+        border: white solid 2px;
+        border-radius: 7px;
+        background: linear-gradient(45deg, rgb(0, 0, 0), rgb(11, 11, 144));     
+        position: relative;
+        text-decoration: none;
+        height: 30px;
+        width: 100px;
+        left: 50%;
+        margin-top: 20px;
+        top:70%;
+    }
+.btn2:hover{
+        box-shadow: 7px 7px rgb(170, 10, 244);
+    }
+
+
+
+@media (max-width:905px) {
+    .container{
+    width: 95%;
+    }
+    .clock{
+        width: 90%;
+        height: 90%;
+    }
+    .container ::before,.container ::after{
+        width: 120px;
+        height: 120px;
+    }
+}
